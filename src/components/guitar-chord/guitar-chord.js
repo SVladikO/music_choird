@@ -1,36 +1,36 @@
-import {Wrapper, ChordName, Table, Tr, Td, Dot, LastDot} from './guitar-chord.style.js';
+import {Wrapper, ChordName, Table, Tr, Td, Dot, LastDot, LadNumber} from '../chord/chord.style.js';
 
-export default function GuitarChord({name, notes}) {
-    const renderRow = () => (
-        <Tr>
-            <Td>
-                <Dot/>
-            </Td>
-            <Td>
-                <Dot/>
-            </Td>
-            <Td>
-                <Dot/>
-            </Td>
-            <Td>
-                <Dot/>
-            </Td>
-            <Td>
-                <Dot/>
-                <LastDot/>
-            </Td>
-        </Tr>
-    );
+export default function GuitarChord(props) {
+    const renderRow = notes => {
+        console.log({notes})
+        return(
+            <Tr>
+                <Td>
+                    {notes.includes(6) && <Dot/>}
+                </Td>
+                <Td>
+                    {notes.includes(5) && <Dot/>}
+                </Td>
+                <Td>
+                    {notes.includes(4) && <Dot/>}
+                </Td>
+                <Td>
+                    {notes.includes(3) && <Dot/>}
+                </Td>
+                <Td>
+                    {notes.includes(2) && <Dot/>}
+                    {notes.includes(1) && <LastDot/>}
+                </Td>
+            </Tr>
+        );
+    }
 
     return (
         <Wrapper>
-            <ChordName>{name}</ChordName>
+            <ChordName>{props.chord.name}</ChordName>
+            <LadNumber>{props.chord.ladNumber}</LadNumber>
             <Table>
-                {renderRow()}
-                {renderRow()}
-                {renderRow()}
-                {renderRow()}
-                {renderRow()}
+                {props.chord.notes.map(n=> renderRow(n))}
             </Table>
         </Wrapper>
 

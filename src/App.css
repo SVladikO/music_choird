@@ -1,8 +1,14 @@
 .App {
   text-align: center;
-  padding: 30px;
+  padding: 10px;
   display: flex;
-  gap: 10px;
+  gap: 30px;
+}
+
+.chord-row-name {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
 }
 
 .App-logo {
