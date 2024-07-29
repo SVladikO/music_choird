@@ -5,12 +5,23 @@
   gap: 30px;
 }
 
+.Tabs button {
+  font-size: 20px;
+  margin: 4px;
+}
 .Tabs {
   margin: 0 auto;
   width: 300px;
-  border: solid 1px red;
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+}
+
+.selected-tab {
+  background: mediumseagreen;
 }
 .Tabs-in {
   maring: 10px 0 0;

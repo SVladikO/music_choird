@@ -14,12 +14,26 @@ const INSTRUMENT_TYPE = {
     GUITAR: 'GUITAR',
     UKULELE: 'UKULELE',
     PIANO: 'PIANO',
-    SELECTED: 'SELECTED',
 }
+
+const guitarChordsObj = {};
+
+guitarData.forEach(chordGroup => {
+    chordGroup.chords.forEach(chord => {
+        guitarChordsObj[chord.name] = chord.notes;
+    })
+})
+
+const ukuleleChordsObj = {};
+
+ukuleleData.forEach(chordGroup => {
+    chordGroup.chords.forEach(chord => {
+        ukuleleChordsObj[chord.name] = chord.notes;
+    })
+})
 
 function App() {
     const [selectedTab, setSelectedTab] = useState(INSTRUMENT_TYPE.GUITAR);
-    const [selectedSubTab, setSelectedSubTab] = useState(INSTRUMENT_TYPE.GUITAR);
     const [selectedChords, setSelectedChords] = useState([]);
 
     const selectChord = chord => setSelectedChords([...selectedChords, chord]);
@@ -37,36 +51,26 @@ function App() {
         </div>
     );
 
+    const renderTabButton = type => {
+        return (
+            <button
+                className={selectedTab === type ? 'selected-tab' : ''}
+                onClick={() => setSelectedTab(type)}>
+                {type}
+            </button>
+        )
+    }
+
     const renderTabs = () => {
         return (
             <div className="Tabs">
-                <button onClick={() => setSelectedTab(INSTRUMENT_TYPE.GUITAR)}>Guitar</button>
-                <button onClick={() => setSelectedTab(INSTRUMENT_TYPE.UKULELE)}>Ukulele</button>
-                <button onClick={() => setSelectedTab(INSTRUMENT_TYPE.PIANO)}>Piano</button>
-                <button
-                    onClick={() => setSelectedTab(INSTRUMENT_TYPE.SELECTED)}>SELECTED {selectedChords.length}</button>
+                {renderTabButton(INSTRUMENT_TYPE.GUITAR)}
+                {renderTabButton(INSTRUMENT_TYPE.UKULELE)}
+                {renderTabButton(INSTRUMENT_TYPE.PIANO)}
             </div>
         )
     }
 
-    const renderSubTabs = () => {
-        return (
-            <div className="Tabs Tabs-in">
-                <button onClick={() => setSelectedSubTab(INSTRUMENT_TYPE.GUITAR)}>Guitar</button>
-                <button onClick={() => setSelectedSubTab(INSTRUMENT_TYPE.UKULELE)}>Ukulele</button>
-                <button onClick={() => setSelectedSubTab(INSTRUMENT_TYPE.PIANO)}>Piano</button>
-            </div>
-        )
-    }
-    // const renderSubTabContent = () => {
-    //     switch (selectedTab) {
-    //         case INSTRUMENT_TYPE.GUITAR:
-    //         case INSTRUMENT_TYPE.UKULELE:
-    //         case INSTRUMENT_TYPE.PIANO:
-    //         {selectedSubTab == INSTRUMENT_TYPE.GUITAR && <div>GUITAR</div>}
-    //     {selectedSubTab == INSTRUMENT_TYPE.UKULELE && <div>UKULELE</div>}
-    //     {selectedSubTab == INSTRUMENT_TYPE.PIANO && <div>PIANO</div>}
-    // }
     const renderTabContent = () => {
         switch (selectedTab) {
             case INSTRUMENT_TYPE.GUITAR:
@@ -77,15 +81,22 @@ function App() {
 
             case INSTRUMENT_TYPE.PIANO:
                 return <div>PIANO</div>;
+        }
+    }
 
-            case INSTRUMENT_TYPE.SELECTED:
-                return (
-                    <div>
-                        <p className='center-content'>SELECTED CHORDS:</p>
-                        {renderSubTabs()}
+    const renderSelectedChords = () => {
+        let chords;
 
-                    </div>
-                )
+        switch (selectedTab) {
+            case INSTRUMENT_TYPE.GUITAR:
+                chords = selectedChords.map(chordName => ({name: chordName, notes: guitarChordsObj[chordName]}))
+                return renderChords({chords}, {showString6: true, showString5: true});
+
+            case INSTRUMENT_TYPE.UKULELE:
+                chords = selectedChords.map(chordName => ({name: chordName, notes: ukuleleChordsObj[chordName]}))
+                return renderChords({chords});
+            case INSTRUMENT_TYPE.PIANO:
+                return <div>empty</div>
         }
     }
 
@@ -94,6 +105,7 @@ function App() {
             <p>Click on chords which you need and find them in selected tab.</p>
             <input placeholder={"Enter chord"}/>
             {renderTabs()}
+            {renderSelectedChords()}
             <div>{selectedChords.map(c => <span>{c}</span>)}</div>
             {renderTabContent()}
         </>
