@@ -18,7 +18,7 @@ export default function GuitarChord(props) {
     }
 
     return (
-        <Wrapper>
+        <Wrapper onClick={() => props.onChordSelect(props.chord.name)}>
             <ChordName>{props.chord.name}</ChordName>
             <LadNumber>{props.chord.ladNumber}</LadNumber>
             <Table>

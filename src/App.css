@@ -5,6 +5,23 @@
   gap: 30px;
 }
 
+.Tabs {
+  margin: 0 auto;
+  width: 300px;
+  border: solid 1px red;
+  display: flex;
+  justify-content: center;
+}
+.Tabs-in {
+  maring: 10px 0 0;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+}
+
+
 .chord-row-name {
   display: flex;
   align-items: center;

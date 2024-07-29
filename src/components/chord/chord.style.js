@@ -11,6 +11,16 @@ export const Wrapper = styled.div`
     flex-direction: column;
     min-width: 86px;
     position: relative;
+    box-sizing: border-box;
+    border: solid 2px white;
+    border-radius: 4px;
+    padding: 6px;
+
+    &:hover {
+        border: solid 2px darkgreen;
+        background: mediumseagreen;
+        cursor: pointer;
+    }
 `;
 
 export const ChordName = styled.div`
