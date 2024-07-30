@@ -2,7 +2,11 @@
   text-align: center;
   padding: 10px;
   display: flex;
+  justify-content: center;
   gap: 30px;
+  /*width: 1000px;*/
+  /*margin: 0 auto;*/
+  /*border: solid 1px red;*/
 }
 
 .Tabs button {
@@ -17,9 +21,17 @@
   position: sticky;
   top: 0;
   z-index: 1;
-
 }
 
+.tab-content {
+  padding: 10px 20px;
+}
+.selected-chords-wrapper {
+  border: solid 3px green;
+  border-radius: 10px;
+  /*padding: 30px;*/
+  /*margin: 0 10px;*/
+}
 .selected-tab {
   background: mediumseagreen;
 }
@@ -27,6 +39,9 @@
   maring: 10px 0 0;
 }
 
+.intro {
+  font-size: 24px;
+}
 .center-content {
   display: flex;
   justify-content: center;

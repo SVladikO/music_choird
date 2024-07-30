@@ -1,4 +1,4 @@
-import {Wrapper, ChordName, Table, Tr, Td, Dot, LastDot, LadNumber} from '../chord/chord.style.js';
+import {Wrapper, DeleteIcon, ChordName, Table, Tr, Td, Dot, LastDot, LadNumber} from '../chord/chord.style.js';
 
 export default function GuitarChord(props) {
     const renderRow = notes => {
@@ -18,10 +18,17 @@ export default function GuitarChord(props) {
     }
 
     return (
-        <Wrapper onClick={() => props.onChordSelect(props.chord.name)}>
+        <Wrapper
+            isSelected={props.isSelected}
+            onClick={() =>  !props.isSelected && props.onChordSelect(props.chord.name)}
+        >
+            {props.isSelected && <DeleteIcon onClick={e => {
+                e.stopPropagation();
+                props.onChordDelete(props.chord.name)
+            }}>X</DeleteIcon>}
             <ChordName>{props.chord.name}</ChordName>
             <LadNumber>{props.chord.ladNumber}</LadNumber>
-            <Table>
+            <Table isSelected={props.isSelected}>
                 {props.chord.notes.map(n=> renderRow(n))}
             </Table>
         </Wrapper>

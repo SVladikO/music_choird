@@ -37,6 +37,7 @@ function App() {
     const [selectedChords, setSelectedChords] = useState([]);
 
     const selectChord = chord => setSelectedChords([...selectedChords, chord]);
+    const deleteChord = chord => setSelectedChords([...selectedChords.filter(c => c !== chord)]);
 
     const renderChords = (chord, externalProps = {}) => (
         <div className="App">
@@ -46,6 +47,7 @@ function App() {
                     key={d.name}
                     chord={d}
                     onChordSelect={selectChord}
+                    onChordDelete={deleteChord}
                     {...externalProps}
                 />)}
         </div>
@@ -85,29 +87,43 @@ function App() {
     }
 
     const renderSelectedChords = () => {
-        let chords;
+        if (!selectedChords.length) {
+            return;
+        }
 
-        switch (selectedTab) {
-            case INSTRUMENT_TYPE.GUITAR:
-                chords = selectedChords.map(chordName => ({name: chordName, notes: guitarChordsObj[chordName]}))
-                return renderChords({chords}, {showString6: true, showString5: true});
+        return (
+            <div className='selected-chords-wrapper'>
+                {getContent()}
+            </div>
+        )
 
-            case INSTRUMENT_TYPE.UKULELE:
-                chords = selectedChords.map(chordName => ({name: chordName, notes: ukuleleChordsObj[chordName]}))
-                return renderChords({chords});
-            case INSTRUMENT_TYPE.PIANO:
-                return <div>empty</div>
+        function getContent() {
+            let chords;
+
+            switch (selectedTab) {
+                case INSTRUMENT_TYPE.GUITAR:
+                    chords = selectedChords.map(chordName => ({name: chordName, notes: guitarChordsObj[chordName]}))
+                    return renderChords({chords}, {showString6: true, showString5: true, isSelected: true});
+
+                case INSTRUMENT_TYPE.UKULELE:
+                    chords = selectedChords.map(chordName => ({name: chordName, notes: ukuleleChordsObj[chordName]}))
+                    return renderChords({chords}, {isSelected: true});
+                case INSTRUMENT_TYPE.PIANO:
+                    return <div></div>
+            }
         }
     }
 
     return (
         <>
-            <p>Click on chords which you need and find them in selected tab.</p>
-            <input placeholder={"Enter chord"}/>
+            <p className="center-content intro">Find and select chords.</p>
+            <p className="center-content">Click on chords which you need.</p>
             {renderTabs()}
-            {renderSelectedChords()}
-            <div>{selectedChords.map(c => <span>{c}</span>)}</div>
-            {renderTabContent()}
+            {/*<div>{selectedChords.map(c => <span>{c}</span>)}</div>*/}
+            <div className="tab-content">
+                {renderSelectedChords()}
+                {renderTabContent()}
+            </div>
         </>
     )
 }

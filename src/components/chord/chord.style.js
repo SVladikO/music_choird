@@ -17,23 +17,34 @@ export const Wrapper = styled.div`
     padding: 6px;
 
     &:hover {
-        border: solid 2px darkgreen;
-        background: mediumseagreen;
+        border: ${p => !p.isSelected ? 'solid 2px darkgreen' : ''};
+        background: ${p => !p.isSelected ? 'mediumseagreen' : ''};
         cursor: pointer;
     }
 `;
 
+export const DeleteIcon = styled.div`
+    position: absolute;
+    right: 0px;
+    color: #a8a7a7;
+    border: solid 1px #a8a7a7;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+`;
 export const ChordName = styled.div`
     font-size: 16px;
     font-weight: bold;
     display: flex;
     justify-content: center;
-    padding: 25px 10px 15px;
+    padding: 0 10px 15px;
 `;
 
 export const Table = styled.table`
     ${tableStyle};
     border-top: solid 2px black;
+    background: ${p => p.isSelected ? '#ffd800' : ''};
 `;
 
 export const Tr = styled.tr`
