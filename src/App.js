@@ -3,10 +3,12 @@ import {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import GuitarChord from './components/guitar-chord/guitar-chord';
+import PianoChord from './components/piano-chord/piano-chord';
 import UkeleleChord from './components/ukulele-chord/ukulele-chord';
 
 import guitarData from './data/guitar';
 import ukuleleData from './data/ukulele';
+import pianoData from './data/piano';
 
 console.log({guitarData})
 
@@ -39,6 +41,8 @@ function App() {
     const selectChord = chord => setSelectedChords([...selectedChords, chord]);
     const deleteChord = chord => setSelectedChords([...selectedChords.filter(c => c !== chord)]);
     const deleteAllChord = () => setSelectedChords([]);
+
+    // const renderChords = (chord, externalProps = {}) => renderChords(chordGroup,)
 
     const renderChords = (chord, externalProps = {}) => (
         <div className={`accord-groups ${externalProps.isSelected ? "accord-groups-selected" : ""}`}>
@@ -83,7 +87,8 @@ function App() {
                 return ukuleleData.map(g => renderChords(g));
 
             case INSTRUMENT_TYPE.PIANO:
-                return <div>Not added yet.</div>;
+                return pianoData.map(g => renderChords(g, {showString6: true, showString5: true}));
+
         }
     }
 

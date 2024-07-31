@@ -8,8 +8,11 @@ const tableStyle = css`
 
 export const Wrapper = styled.div`
     display: flex;
+    
     flex-direction: column;
-    min-width: 86px;
+    min-width: ${p => p.width || 100}px;
+    max-width: ${p => p.width || 100}px;
+    //max-width: 86px;
     position: relative;
     box-sizing: border-box;
     border: solid 2px white;
@@ -31,7 +34,6 @@ export const DeleteIcon = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-}
 `;
 export const ChordName = styled.div`
     font-size: 16px;
@@ -52,10 +54,10 @@ export const Tr = styled.tr`
 `;
 
 export const Td = styled.td`
-    width: 14px;
-    height: 20px;
     ${tableStyle};
     position: relative;
+    width: 14px;
+    height: 20px;
 `;
 
 export const TdLast = styled.td`

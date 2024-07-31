@@ -21,6 +21,7 @@ export default function GuitarChord(props) {
         <Wrapper
             isSelected={props.isSelected}
             onClick={() =>  !props.isSelected && props.onChordSelect(props.chord.name)}
+            width={86}
         >
             {props.isSelected && <DeleteIcon onClick={e => {
                 e.stopPropagation();
