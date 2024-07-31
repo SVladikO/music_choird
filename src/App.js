@@ -38,6 +38,7 @@ function App() {
 
     const selectChord = chord => setSelectedChords([...selectedChords, chord]);
     const deleteChord = chord => setSelectedChords([...selectedChords.filter(c => c !== chord)]);
+    const deleteAllChord = () => setSelectedChords([]);
 
     const renderChords = (chord, externalProps = {}) => (
         <div className={`accord-groups ${externalProps.isSelected ? "accord-groups-selected" : ""}`}>
@@ -94,6 +95,7 @@ function App() {
         return (
             <div className='selected-chords-wrapper'>
                 {getContent()}
+                <div className='delete-all-chords' onClick={deleteAllChord}>Delete all</div>
             </div>
         )
 

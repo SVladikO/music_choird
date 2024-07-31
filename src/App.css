@@ -22,7 +22,7 @@
   z-index: 1;
 }
 .Tabs button {
-  border-radius: 0px;
+  border-radius: 0;
   font-size: 20px;
   color: black;
 }
@@ -32,7 +32,18 @@
   /*border: solid 1px orange;*/
 }
 .selected-chords-wrapper {
-  /*border: solid 3px green;*/
+}
+.delete-all-chords {
+  border: solid 1px #949292;
+  color: #949292;
+  width: 80px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px;
+}
+
+.selected-chords-wrapper {
+/*border: solid 3px green;*/
   width: fit-content;
   border-radius: 10px;
   position: sticky;
@@ -42,9 +53,6 @@
 }
 .selected-tab {
   background: mediumseagreen;
-}
-.Tabs-in {
-  maring: 10px 0 0;
 }
 
 .intro {
