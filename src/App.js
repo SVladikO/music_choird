@@ -41,10 +41,10 @@ function App() {
 
     const renderChords = (chord, externalProps = {}) => (
         <div className={`accord-groups ${externalProps.isSelected ? "accord-groups-selected" : ""}`}>
-            <div className="chord-row-name">{chord.name}</div>
-            {chord.chords.map(d =>
+            {!externalProps.isSelected && <div className="chord-row-name">{chord.name}</div>}
+            {chord.chords.map((d, index) =>
                 <GuitarChord
-                    key={d.name}
+                    key={d.name + index}
                     chord={d}
                     onChordSelect={selectChord}
                     onChordDelete={deleteChord}
@@ -82,7 +82,7 @@ function App() {
                 return ukuleleData.map(g => renderChords(g));
 
             case INSTRUMENT_TYPE.PIANO:
-                return <div>PIANO</div>;
+                return <div>Not added yet.</div>;
         }
     }
 

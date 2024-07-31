@@ -2,6 +2,7 @@
   text-align: center;
   padding: 10px;
   display: flex;
+  width: fit-content;
   /*gap: 15px;*/
   /*width: 1000px;*/
   /*margin: 0 auto;*/
@@ -21,17 +22,21 @@
   z-index: 1;
 }
 .Tabs button {
+  border-radius: 0px;
   font-size: 20px;
   color: black;
 }
 .tab-content {
-  padding: 10px 20px;
+  padding: 10px;
   overflow-x: auto;
   /*border: solid 1px orange;*/
 }
 .selected-chords-wrapper {
   /*border: solid 3px green;*/
+  width: fit-content;
   border-radius: 10px;
+  position: sticky;
+  left: 0;
   /*padding: 30px;*/
   /*margin: 0 10px;*/
 }
@@ -55,6 +60,12 @@
   display: flex;
   align-items: center;
   font-size: 30px;
+  position: sticky;
+  left: -10px;
+  /*background: red;*/
+  background: white;
+  z-index: 2;
+  padding: 0 6px;
 }
 
 .App-logo {
