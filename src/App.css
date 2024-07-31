@@ -1,17 +1,15 @@
-.App {
+.accord-groups {
   text-align: center;
   padding: 10px;
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  /*gap: 15px;*/
   /*width: 1000px;*/
   /*margin: 0 auto;*/
   /*border: solid 1px red;*/
 }
-
-.Tabs button {
-  font-size: 20px;
-  margin: 4px;
+.accord-groups-selected {
+  flex-wrap: wrap;
+  justify-content: left;
 }
 .Tabs {
   margin: 0 auto;
@@ -22,12 +20,17 @@
   top: 0;
   z-index: 1;
 }
-
+.Tabs button {
+  font-size: 20px;
+  color: black;
+}
 .tab-content {
   padding: 10px 20px;
+  overflow-x: auto;
+  /*border: solid 1px orange;*/
 }
 .selected-chords-wrapper {
-  border: solid 3px green;
+  /*border: solid 3px green;*/
   border-radius: 10px;
   /*padding: 30px;*/
   /*margin: 0 10px;*/

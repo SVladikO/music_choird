@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     box-sizing: border-box;
     border: solid 2px white;
     border-radius: 4px;
-    padding: 6px;
+    padding: 6px 10px;
 
     &:hover {
         border: ${p => !p.isSelected ? 'solid 2px darkgreen' : ''};

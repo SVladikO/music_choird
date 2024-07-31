@@ -40,7 +40,7 @@ function App() {
     const deleteChord = chord => setSelectedChords([...selectedChords.filter(c => c !== chord)]);
 
     const renderChords = (chord, externalProps = {}) => (
-        <div className="App">
+        <div className={`accord-groups ${externalProps.isSelected ? "accord-groups-selected" : ""}`}>
             <div className="chord-row-name">{chord.name}</div>
             {chord.chords.map(d =>
                 <GuitarChord
