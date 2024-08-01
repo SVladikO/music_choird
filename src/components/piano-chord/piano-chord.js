@@ -8,46 +8,37 @@ import {
 } from '../chord/chord.style.js';
 import {TableWrapper, Dot, PianoTd, BlackBtn} from './piano-chord.style';
 
+const blackButtons = [
+    {left: 16, position: 2},
+    {left: 39, position: 4},
+    {left: 84, position: 7},
+    {left: 106, position: 9},
+    {left: 130, position: 11},
+    {left: 174, position: 14},
+    {left: 196, position: 16},
+    {left: 241, position: 19},
+    {left: 263, position: 21},
+]
+const whiteButtons = [1, 3, 5, 6, 8, 10, 12, 13, 15, 17, 18, 20]
+
 export default function PianoChord(props) {
     const renderBlackButtons = notes => {
         return (
             <div>
-                <BlackBtn left={16}>{notes.includes(2) && <Dot/>}</BlackBtn>
-                <BlackBtn left={39}>{notes.includes(4) && <Dot/>}</BlackBtn>
-                <BlackBtn left={84}>{notes.includes(7) && <Dot/>}</BlackBtn>
-                <BlackBtn left={106}>{notes.includes(9) && <Dot/>}</BlackBtn>
-                <BlackBtn left={130}>{notes.includes(11) && <Dot/>}</BlackBtn>
-                <BlackBtn left={174}>{notes.includes(14) && <Dot/>}</BlackBtn>
-                <BlackBtn left={196}>{notes.includes(16) && <Dot/>}</BlackBtn>
-                <BlackBtn left={241}>{notes.includes(19) && <Dot/>}</BlackBtn>
-                <BlackBtn left={263}>{notes.includes(21) && <Dot/>}</BlackBtn>
+                {blackButtons.map(b => (
+                    <BlackBtn left={b.left}>{notes.includes(b.position) && <Dot/>}</BlackBtn>
+                ))
+                }
             </div>
         )
     }
+
     const renderWhiteButtons = notes => {
         return (
             <Tr>
-                <PianoTd>{notes.includes(1) && <Dot/>}</PianoTd>
-                {/*2*/}
-                <PianoTd>{notes.includes(3) && <Dot/>}</PianoTd>
-                {/*4*/}
-                <PianoTd>{notes.includes(5) && <Dot/>}</PianoTd>
-                <PianoTd>{notes.includes(6) && <Dot/>}</PianoTd>
-                {/*7*/}
-                <PianoTd>{notes.includes(8) && <Dot/>}</PianoTd>
-                {/*9*/}
-                <PianoTd>{notes.includes(10) && <Dot/>}</PianoTd>
-                {/*11*/}
-                <PianoTd>{notes.includes(12) && <Dot/>}</PianoTd>
-                <PianoTd>{notes.includes(13) && <Dot/>}</PianoTd>
-                {/*14*/}
-                <PianoTd>{notes.includes(15) && <Dot/>}</PianoTd>
-                {/*16*/}
-                <PianoTd>{notes.includes(17) && <Dot/>}</PianoTd>
-                <PianoTd>{notes.includes(18) && <Dot/>}</PianoTd>
-                {/*19*/}
-                <PianoTd>{notes.includes(20) && <Dot/>}</PianoTd>
-                {/*21*/}
+                {whiteButtons.map(b => (
+                    <PianoTd>{notes.includes(b) && <Dot/>}</PianoTd>
+                ))}
             </Tr>
         );
     }
