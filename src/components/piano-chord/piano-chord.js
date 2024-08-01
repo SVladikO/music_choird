@@ -26,9 +26,8 @@ export default function PianoChord(props) {
         return (
             <div>
                 {blackButtons.map(b => (
-                    <BlackBtn left={b.left}>{notes.includes(b.position) && <Dot/>}</BlackBtn>
-                ))
-                }
+                    <BlackBtn left={b.left}>{notes.includes(b.position) && <Dot/>}{b.position}</BlackBtn>
+                ))}
             </div>
         )
     }
@@ -37,7 +36,7 @@ export default function PianoChord(props) {
         return (
             <Tr>
                 {whiteButtons.map(b => (
-                    <PianoTd>{notes.includes(b) && <Dot/>}</PianoTd>
+                    <PianoTd>{notes.includes(b) && <Dot/>}{b}</PianoTd>
                 ))}
             </Tr>
         );
