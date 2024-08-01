@@ -8,7 +8,6 @@ const tableStyle = css`
 
 export const Wrapper = styled.div`
     display: flex;
-    
     flex-direction: column;
     min-width: ${p => p.width || 100}px;
     max-width: ${p => p.width || 100}px;
@@ -18,6 +17,7 @@ export const Wrapper = styled.div`
     border: solid 2px white;
     border-radius: 4px;
     padding: 6px 10px;
+    //background: mediumseagreen;
 
     &:hover {
         border: ${p => !p.isSelected ? 'solid 2px darkgreen' : ''};
@@ -36,11 +36,11 @@ export const DeleteIcon = styled.div`
     border-radius: 50%;
 `;
 export const ChordName = styled.div`
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     display: flex;
     justify-content: center;
-    padding: 0 10px 15px;
+    padding: 10px;
 `;
 
 export const Table = styled.table`

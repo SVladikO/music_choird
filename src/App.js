@@ -34,6 +34,14 @@ ukuleleData.forEach(chordGroup => {
     })
 })
 
+const pianoChordsObj = {};
+
+pianoData.forEach(chordGroup => {
+    chordGroup.chords.forEach(chord => {
+        pianoChordsObj[chord.name] = chord.notes;
+    })
+})
+
 function App() {
     const [selectedTab, setSelectedTab] = useState(INSTRUMENT_TYPE.GUITAR);
     const [selectedChords, setSelectedChords] = useState([]);
@@ -42,13 +50,14 @@ function App() {
     const deleteChord = chord => setSelectedChords([...selectedChords.filter(c => c !== chord)]);
     const deleteAllChord = () => setSelectedChords([]);
 
-    // const renderChords = (chord, externalProps = {}) => renderChords(chordGroup,)
+    const renderGuitarChords = (chordGroup, externalProps = {}) => renderChords(chordGroup, GuitarChord, externalProps);
+    const renderPianoChords = (chordGroup, externalProps = {}) => renderChords(chordGroup, PianoChord, externalProps);
 
-    const renderChords = (chord, externalProps = {}) => (
+    const renderChords = (chord, ChordComponent, externalProps = {}) => (
         <div className={`accord-groups ${externalProps.isSelected ? "accord-groups-selected" : ""}`}>
             {!externalProps.isSelected && <div className="chord-row-name">{chord.name}</div>}
             {chord.chords.map((d, index) =>
-                <GuitarChord
+                <ChordComponent
                     key={d.name + index}
                     chord={d}
                     onChordSelect={selectChord}
@@ -81,13 +90,13 @@ function App() {
     const renderTabContent = () => {
         switch (selectedTab) {
             case INSTRUMENT_TYPE.GUITAR:
-                return guitarData.map(g => renderChords(g, {showString6: true, showString5: true}));
+                return guitarData.map(g => renderGuitarChords(g, {showString6: true, showString5: true}));
 
             case INSTRUMENT_TYPE.UKULELE:
-                return ukuleleData.map(g => renderChords(g));
+                return ukuleleData.map(g => renderGuitarChords(g));
 
             case INSTRUMENT_TYPE.PIANO:
-                return pianoData.map(g => renderChords(g, {showString6: true, showString5: true}));
+                return pianoData.map(g => renderPianoChords(g, {showString6: true, showString5: true}));
 
         }
     }
@@ -110,13 +119,14 @@ function App() {
             switch (selectedTab) {
                 case INSTRUMENT_TYPE.GUITAR:
                     chords = selectedChords.map(chordName => ({name: chordName, notes: guitarChordsObj[chordName]}))
-                    return renderChords({chords}, {showString6: true, showString5: true, isSelected: true});
+                    return renderGuitarChords({chords}, {showString6: true, showString5: true, isSelected: true});
 
                 case INSTRUMENT_TYPE.UKULELE:
                     chords = selectedChords.map(chordName => ({name: chordName, notes: ukuleleChordsObj[chordName]}))
-                    return renderChords({chords}, {isSelected: true});
+                    return renderGuitarChords({chords}, {isSelected: true});
                 case INSTRUMENT_TYPE.PIANO:
-                    return <div></div>
+                    chords = selectedChords.map(chordName => ({name: chordName, notes: pianoChordsObj[chordName]}))
+                    return renderPianoChords({chords}, {isSelected: true});
             }
         }
     }
