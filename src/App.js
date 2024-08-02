@@ -90,13 +90,13 @@ function App() {
     const renderTabContent = () => {
         switch (selectedTab) {
             case INSTRUMENT_TYPE.GUITAR:
-                return guitarData.map(g => renderGuitarChords(g, {showString6: true, showString5: true}));
+                return guitarData.map(g => renderGuitarChords(g, {isGuitar: true}));
 
             case INSTRUMENT_TYPE.UKULELE:
                 return ukuleleData.map(g => renderGuitarChords(g));
 
             case INSTRUMENT_TYPE.PIANO:
-                return pianoData.map(g => renderPianoChords(g, {showString6: true, showString5: true}));
+                return pianoData.map(g => renderPianoChords(g));
 
         }
     }
@@ -119,7 +119,7 @@ function App() {
             switch (selectedTab) {
                 case INSTRUMENT_TYPE.GUITAR:
                     chords = selectedChords.map(chordName => ({name: chordName, notes: guitarChordsObj[chordName]}))
-                    return renderGuitarChords({chords}, {showString6: true, showString5: true, isSelected: true});
+                    return renderGuitarChords({chords}, {isGuitar: true, isSelected: true});
 
                 case INSTRUMENT_TYPE.UKULELE:
                     chords = selectedChords.map(chordName => ({name: chordName, notes: ukuleleChordsObj[chordName]}))
