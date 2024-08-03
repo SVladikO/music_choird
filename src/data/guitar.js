@@ -19,6 +19,7 @@ const guitarData = [
         name: 'B', chords: [
             {name: 'B', notes: [[], [1, 5], [2, 3, 4], [],], headerNotes: []},
             {name: 'Bm', notes: [[], [1, 5], [2], [3, 4],], headerNotes: []},
+            {name: 'B5', notes: [[5], [], [3, 4], []], headerNotes: [1, 3, 11]},
             {name: 'B6', notes: [[], [5, 6], [], [1, 2, 3, 4]], headerNotes: []},
             {name: 'B7', notes: [[4], [1, 3, 5], [], [],], headerNotes: []},
             {name: 'B9', notes: [[4], [1, 2, 3, 5], [], [],], headerNotes: []},
