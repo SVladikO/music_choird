@@ -49,6 +49,7 @@ const ukuleleData = [
         name: 'D', chords: [
             {name: 'D', notes: [[], [2, 3, 4], [], [], [1]], headerNotes: []},
             {name: 'Dm', notes: [[2], [3, 4], [], []], headerNotes: []},
+            {name: 'D5', notes: [[], [1, 2, 3, 4], [], [], [1, 2]], headerNotes: []},
             {name: 'D6', notes: [[], [1, 2, 3, 4], [], []], headerNotes: []},
             {name: 'D7', notes: [[], [2, 3, 4], [1], []], headerNotes: []},
             {name: 'D9', notes: [[], [2, 4], [1], [3]], headerNotes: []},
