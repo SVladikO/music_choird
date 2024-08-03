@@ -34,6 +34,7 @@ const guitarData = [
         name: 'C', chords: [
             {name: 'C', notes: [1, 5, 8]},
             {name: 'Cm', notes: [1, 4, 8]},
+            {name: 'C5', notes: [1, 8]},
             {name: 'C6', notes: [1, 5, 8, 10]},
             {name: 'C7', notes: [1, 5, 8, 11]},
             {name: 'C9', notes: [1, 5, 8, 11, 15]},
