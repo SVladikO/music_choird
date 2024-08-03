@@ -8,8 +8,8 @@ export default function GuitarChord(props) {
      * x o o x x x
      * 6 5 4 3 2 1
      *
-     * @param ix
-     * @param io
+     * @param ix 1, 3, 5, 7, 9, 11
+     * @param io 2, 4, 6, 8, 10, 12
      * @param isLast
      * @returns {JSX.Element}
      */

@@ -1,8 +1,8 @@
 const ukuleleData = [
     {
         name: 'A', chords: [
-            {name: 'A', notes: [[3], [4], [], []], headerNotes: [1, 3, 4, 5, 7, 9, 11]},
-            {name: 'Am', notes: [[], [4], [], []], headerNotes: [2, 4, 6, 8, 10, 12]},
+            {name: 'A', notes: [[3], [4], [], []], headerNotes: []},
+            {name: 'Am', notes: [[], [4], [], []], headerNotes: []},
             {name: 'A6', notes: [[], [2, 4], [], [1, 3]], headerNotes: []},
             {name: 'A7', notes: [[3], [], [], []], headerNotes: []},
             {name: 'A9', notes: [[3], [1], [], []], headerNotes: []},
@@ -53,7 +53,7 @@ const ukuleleData = [
             {name: 'Dm7', notes: [[2], [3, 4], [1], []], headerNotes: []},
             {name: 'Dmaj7', notes: [[], [1, 2, 3, 4], [], [1]], headerNotes: []},
             {name: 'D+', notes: [[1], [2, 3], [4], []], headerNotes: []},
-            {name: 'Dsus', notes: [[], [], [3, 4], []], headerNotes: []},
+            {name: 'Dsus4', notes: [[], [3], [2], []], headerNotes: [2, 4]},
         ]
     },
     {

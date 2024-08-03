@@ -9,8 +9,8 @@ const tableStyle = css`
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-     ${p => `min-width: ${p.width}px`};
-     ${p => `max-width: ${p.width}px`};
+    ${p => p.width && `min-width: ${p.width}px`};
+    ${p => p.width && `max-width: ${p.width}px`};
     position: relative;
     box-sizing: border-box;
     border: solid 2px white;
@@ -39,13 +39,14 @@ export const ChordName = styled.div`
     font-weight: bold;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 0;
 `;
 
 export const Table = styled.table`
     ${tableStyle};
     border-top: solid 2px black;
     background: ${p => p.isSelected ? '#ffd800' : ''};
+    width: max-content;
 `;
 
 export const Tr = styled.tr`
@@ -89,7 +90,7 @@ export const LastDot = styled.div`
 
 export const XO = styled.div`
     position: absolute;
-    top: -20px;
+    top: -18px;
     left: ${p => p.left}px;
     font-size: 14px;
 `
