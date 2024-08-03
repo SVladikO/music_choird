@@ -10,7 +10,7 @@ const ukuleleData = [
             {name: 'Am7', notes: [[], [], [1, 2], [3]]},
             {name: 'Amaj7', notes: [[3, 4], [], [], []]},
             {name: 'A+', notes: [[2, 3], [4], [], []]},
-            {name: 'Asus', notes: [[], [3, 4], [], []]},
+            {name: 'Asus4', notes: [[], [3, 4], [], []]},
             {name: 'Aadd9', notes: [[3], [1, 4], [], []]},
         ]
     },
@@ -39,7 +39,7 @@ const ukuleleData = [
             {name: 'Cm7', notes: [[], [], [1, 2, 3, 4], []]},
             {name: 'Cmaj7', notes: [[], [1], [], []]},
             {name: 'C+', notes: [[4], [], [1], []]},
-            {name: 'Csus', notes: [[], [3], [1, 2], []]},
+            {name: 'Csus4', notes: [[2], [], [1], []]},
         ]
     },
     {

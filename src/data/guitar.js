@@ -10,7 +10,7 @@ const guitarData = [
             {name: 'Am7', notes: [[2], [3, 4], [1], [],]},
             {name: 'Amaj7', notes: [[3], [2, 4], [], [],]},
             {name: 'A+', notes: [[1], [2, 3], [4], [],]},
-            {name: 'Asus', notes: [[], [3, 4], [2], [],]},
+            {name: 'Asus4', notes: [[], [3, 4], [2], [],]},
             {name: 'Aadd9', notes: [[], [2,4], [], [3],]},
         ]
     },
@@ -39,7 +39,7 @@ const guitarData = [
             {name: 'Cm7', notes: [[2, 4], [], [1, 3], [],]},
             {name: 'Cmaj7', notes: [[], [4], [5], [],]},
             {name: 'C+', notes: [[2, 3], [4], [], [],]},
-            {name: 'Csus', notes: [[2], [], [1, 4], [],]},
+            {name: 'Csus4', notes: [[2], [], [4, 5], [],]},
         ]
     },
     {
