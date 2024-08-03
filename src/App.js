@@ -4,7 +4,6 @@ import logo from './logo.svg';
 import './App.css';
 import GuitarChord from './components/guitar-chord/guitar-chord';
 import PianoChord from './components/piano-chord/piano-chord';
-import UkeleleChord from './components/ukulele-chord/ukulele-chord';
 
 import guitarData from './data/guitar';
 import ukuleleData from './data/ukulele';
@@ -22,7 +21,7 @@ const guitarChordsObj = {};
 
 guitarData.forEach(chordGroup => {
     chordGroup.chords.forEach(chord => {
-        guitarChordsObj[chord.name] = chord.notes;
+        guitarChordsObj[chord.name] = {...chord};
     })
 })
 
@@ -30,7 +29,7 @@ const ukuleleChordsObj = {};
 
 ukuleleData.forEach(chordGroup => {
     chordGroup.chords.forEach(chord => {
-        ukuleleChordsObj[chord.name] = chord.notes;
+        ukuleleChordsObj[chord.name] = {...chord};
     })
 })
 
@@ -38,7 +37,7 @@ const pianoChordsObj = {};
 
 pianoData.forEach(chordGroup => {
     chordGroup.chords.forEach(chord => {
-        pianoChordsObj[chord.name] = chord.notes;
+        pianoChordsObj[chord.name] = {...chord};
     })
 })
 
@@ -118,14 +117,15 @@ function App() {
 
             switch (selectedTab) {
                 case INSTRUMENT_TYPE.GUITAR:
-                    chords = selectedChords.map(chordName => ({name: chordName, notes: guitarChordsObj[chordName]}))
+                    chords = selectedChords.map(chordName => ({...guitarChordsObj[chordName]}))
                     return renderGuitarChords({chords}, {isGuitar: true, isSelected: true});
 
                 case INSTRUMENT_TYPE.UKULELE:
-                    chords = selectedChords.map(chordName => ({name: chordName, notes: ukuleleChordsObj[chordName]}))
+                    chords = selectedChords.map(chordName => ({...ukuleleChordsObj[chordName]}))
                     return renderGuitarChords({chords}, {isSelected: true});
+
                 case INSTRUMENT_TYPE.PIANO:
-                    chords = selectedChords.map(chordName => ({name: chordName, notes: pianoChordsObj[chordName]}))
+                    chords = selectedChords.map(chordName => ({...pianoChordsObj[chordName]}))
                     return renderPianoChords({chords}, {isSelected: true});
             }
         }

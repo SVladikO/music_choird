@@ -9,9 +9,8 @@ const tableStyle = css`
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    min-width: ${p => p.width || 100}px;
-    max-width: ${p => p.width || 100}px;
-    //max-width: 86px;
+     ${p => `min-width: ${p.width}px`};
+     ${p => `max-width: ${p.width}px`};
     position: relative;
     box-sizing: border-box;
     border: solid 2px white;
@@ -56,7 +55,8 @@ export const Tr = styled.tr`
 export const Td = styled.td`
     ${tableStyle};
     position: relative;
-    width: 14px;
+    min-width: 14px;
+    max-width: 14px;
     height: 20px;
 `;
 
@@ -86,6 +86,14 @@ export const LastDot = styled.div`
     ${dotStyle};
     right: -4.8px;
 `;
+
+export const XO = styled.div`
+    position: absolute;
+    top: -20px;
+    left: ${p => p.left}px;
+    font-size: 14px;
+`
+
 export const LadNumber = styled.div`
     position: absolute;
     left: -2px;
