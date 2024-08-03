@@ -96,7 +96,7 @@ const guitarData = [
             {name: 'Gm7', notes: [[1, 2, 3, 4, 6], [], [5], [],], headerNotes: []},
             {name: 'Gmaj7', notes: [[1], [2], [3], [4],], headerNotes: []},
             {name: 'G+', notes: [[4], [], [1], [],], headerNotes: []},
-            {name: 'Gsus', notes: [[2], [], [1], [],], headerNotes: []},
+            {name: 'Gsus4', notes: [[2], [], [1, 6], [],], headerNotes: [6, 8, 9]},
         ]
     },
 ];
