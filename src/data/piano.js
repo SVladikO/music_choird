@@ -25,7 +25,7 @@ const guitarData = [
             {name: 'Bm7', notes: [10, 12, 15, 19]},
             {name: 'Bmaj7', notes: [11, 12, 16,19]},
             {name: 'B+', notes: [12, 16, 20]},
-            {name: 'Bsus', notes: []},
+            {name: 'Bsus4', notes: [10, 12, 14, 17]},
         ]
     },
     {
