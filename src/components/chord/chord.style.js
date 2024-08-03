@@ -88,6 +88,6 @@ export const LastDot = styled.div`
 `;
 export const LadNumber = styled.div`
     position: absolute;
-    left: -16px;
-    top: 54px;
+    left: -2px;
+    top: 40px;
 `;
