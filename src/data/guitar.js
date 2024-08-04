@@ -3,7 +3,7 @@ const guitarData = [
         name: 'A', chords: [/** */
             {name: 'A', notes: [[], [2, 3, 4], [], [],], headerNotes: []},
             {name: 'Am', notes: [[2], [3, 4], [], [],], headerNotes: []},
-            {name: 'A5', notes: [[6], [], [4, 5], [],], headerNotes: [1, 3, 5]},
+            {name: 'A5', notes: [[6], [], [4, 5], [],], headerNotes: [1, 3, 5], ladNumber: 5},
             {name: 'A6', notes: [[], [1, 2, 3, 4], [], [],], headerNotes: []},
             {name: 'A7', notes: [[], [2, 3, 4], [1], [],], headerNotes: []},
             {name: 'A9', notes: [[], [2, 4], [1], [3],], headerNotes: []},
@@ -94,6 +94,7 @@ const guitarData = [
         name: 'G', chords: [
             {name: 'G', notes: [[], [5], [1, 6], [],], headerNotes: []},
             {name: 'Gm', notes: [[1, 2, 3, 6], [], [4, 5], []], ladNumber: 3, headerNotes: []},
+            {name: 'G5', notes: [[6], [], [4, 5], [],],  ladNumber: 3, headerNotes: [1, 3, 5],},
             {name: 'G6', notes: [[], [5], [6], [],], headerNotes: []},
             {name: 'G7', notes: [[1], [5], [6], [],], headerNotes: []},
             {name: 'G9', notes: [[1], [3], [6], [],], headerNotes: []},
