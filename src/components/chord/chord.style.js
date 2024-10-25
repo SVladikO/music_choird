@@ -16,16 +16,15 @@ export const Wrapper = styled.div`
     border: solid 2px white;
     border-radius: 4px;
     padding: 6px 10px;
-    //background: mediumseagreen;
 
     &:hover {
-        border: ${p => !p.isSelected ? 'solid 2px darkgreen' : ''};
-        background: ${p => !p.isSelected ? 'rgb(89, 244, 158)' : ''};
+        border: ${p => p.isSelected ? '' : 'solid 2px darkgreen'};
+        background: ${p => p.isSelected ? '' : 'rgb(89, 244, 158)'};
         cursor: pointer;
     }
     
     &:active {
-        background: #ffd800;
+        background: ${p => p.isSelected ? '' : 'rgb(25, 212, 109)'}
     }
 `;
 
