@@ -24,6 +24,8 @@
   border-radius: 4px;
   text-align: center;
   padding: 2px;
+  margin: 2px 0 0 22px;
+  cursor: pointer;
 }
 
 .selected-chords-wrapper {

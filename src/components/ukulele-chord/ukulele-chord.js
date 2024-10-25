@@ -1,31 +1,5 @@
-import {Wrapper, ChordName, Table, Tr, Td, Dot, LastDot} from '../chord/chord.style.js';
+import Chord from "../chord/chord";
 
-export default function UkuleleChord({name, notes}) {
-    const renderRow = () => (
-        <Tr>
-            <Td>
-                {/*<Dot/>*/}
-            </Td>
-            <Td>
-                {/*<Dot/>*/}
-            </Td>
-            <Td>
-                {/*<Dot/>*/}
-                {/*<LastDot/>*/}
-            </Td>
-        </Tr>
-    );
-
-    return (
-        <Wrapper>
-            <ChordName>{name}</ChordName>
-            <Table>
-                {renderRow()}
-                {renderRow()}
-                {renderRow()}
-                {renderRow()}
-            </Table>
-        </Wrapper>
-
-    )
+export default function UkeleleChord(props) {
+    return <Chord {...props} />
 }
