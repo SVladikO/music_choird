@@ -70,7 +70,7 @@ function App() {
     const renderTabButton = type => {
         return (
             <button
-                className={selectedTab === type ? 'selected-tab' : ''}
+                className={`tab ${selectedTab === type ? 'selected-tab' : ''}`}
                 onClick={() => setSelectedTab(type)}>
                 {type}
             </button>

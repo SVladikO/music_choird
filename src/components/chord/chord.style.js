@@ -48,7 +48,7 @@ export const ChordName = styled.div`
 export const Table = styled.table`
     ${tableStyle};
     border-top: solid 2px black;
-    background: ${p => p.isSelected ? '#ffd800' : ''};
+    background: ${p => p.isSelected ? '' : ''};
     width: max-content;
 `;
 
