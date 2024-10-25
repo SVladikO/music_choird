@@ -1,9 +1,9 @@
 import {useState} from 'react';
 
-import logo from './logo.svg';
 import './App.css';
 import GuitarChord from './components/guitar-chord/guitar-chord';
 import PianoChord from './components/piano-chord/piano-chord';
+import Tabs from './components/tabs/tabs';
 
 import guitarData from './data/guitar';
 import ukuleleData from './data/ukulele';
@@ -41,6 +41,12 @@ pianoData.forEach(chordGroup => {
     })
 })
 
+const INTRUMENT_TABS = [
+    INSTRUMENT_TYPE.GUITAR,
+    INSTRUMENT_TYPE.UKULELE,
+    INSTRUMENT_TYPE.PIANO,
+]
+
 function App() {
     const [selectedTab, setSelectedTab] = useState(INSTRUMENT_TYPE.GUITAR);
     const [selectedChords, setSelectedChords] = useState([]);
@@ -67,37 +73,14 @@ function App() {
         </div>
     );
 
-    const renderTabButton = type => {
-        return (
-            <button
-                className={`tab ${selectedTab === type ? 'selected-tab' : ''}`}
-                onClick={() => setSelectedTab(type)}>
-                {type}
-            </button>
-        )
-    }
-
-    const renderTabs = () => {
-        return (
-            <div className="Tabs">
-                {renderTabButton(INSTRUMENT_TYPE.GUITAR)}
-                {renderTabButton(INSTRUMENT_TYPE.UKULELE)}
-                {renderTabButton(INSTRUMENT_TYPE.PIANO)}
-            </div>
-        )
-    }
-
     const renderTabContent = () => {
         switch (selectedTab) {
             case INSTRUMENT_TYPE.GUITAR:
                 return guitarData.map(g => renderGuitarChords(g, {isGuitar: true}));
-
             case INSTRUMENT_TYPE.UKULELE:
                 return ukuleleData.map(g => renderGuitarChords(g));
-
             case INSTRUMENT_TYPE.PIANO:
                 return pianoData.map(g => renderPianoChords(g));
-
         }
     }
 
@@ -134,9 +117,12 @@ function App() {
 
     return (
         <>
-            <p className="center-content intro">Find and select chords.</p>
             <p className="center-content">Click on chords which you need.</p>
-            {renderTabs()}
+            <Tabs
+                selectedTab={selectedTab}
+                tabs={INTRUMENT_TABS}
+                onTabClick={tabType => setSelectedTab(tabType)}
+            />
             {/*<div>{selectedChords.map(c => <span>{c}</span>)}</div>*/}
             <div className="tab-content">
                 {renderSelectedChords()}

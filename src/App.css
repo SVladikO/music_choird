@@ -12,26 +12,10 @@
   flex-wrap: wrap;
   justify-content: left;
 }
-.Tabs {
-  margin: 0 auto;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-.Tabs button {
-  border-radius: 0;
-  font-size: 20px;
-  color: black;
-}
 .tab-content {
   padding: 10px;
   overflow-x: auto;
   /*border: solid 1px orange;*/
-}
-.selected-chords-wrapper {
 }
 .delete-all-chords {
   border: solid 1px #949292;
@@ -50,14 +34,6 @@
   left: 0;
   /*padding: 30px;*/
   /*margin: 0 10px;*/
-}
-.tab {
-  background: white;
-}
-
-.selected-tab {
-  color: white !important;
-  background: black;
 }
 
 .intro {
