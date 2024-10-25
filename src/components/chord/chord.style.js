@@ -20,8 +20,12 @@ export const Wrapper = styled.div`
 
     &:hover {
         border: ${p => !p.isSelected ? 'solid 2px darkgreen' : ''};
-        background: ${p => !p.isSelected ? 'mediumseagreen' : ''};
+        background: ${p => !p.isSelected ? 'rgb(89, 244, 158)' : ''};
         cursor: pointer;
+    }
+    
+    &:active {
+        background: #ffd800;
     }
 `;
 
