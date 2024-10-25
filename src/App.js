@@ -4,6 +4,7 @@ import './App.css';
 import GuitarChord from './components/guitar-chord/guitar-chord';
 import UkuleleChord from './components/ukulele-chord/ukulele-chord';
 import PianoChord from './components/piano-chord/piano-chord';
+import ChordName from './components/chord-name/chord-name';
 import Tabs from './components/tabs/tabs';
 
 import guitarData from './data/guitar';
@@ -16,6 +17,7 @@ const INSTRUMENT_TYPE = {
     GUITAR: 'GUITAR',
     UKULELE: 'UKULELE',
     PIANO: 'PIANO',
+    CHORD_NAME_ONLY: '***',
 }
 
 const guitarChordsObj = {};
@@ -46,6 +48,7 @@ const INSTRUMENT_TABS = [
     INSTRUMENT_TYPE.GUITAR,
     INSTRUMENT_TYPE.UKULELE,
     INSTRUMENT_TYPE.PIANO,
+    INSTRUMENT_TYPE.CHORD_NAME_ONLY,
 ]
 
 function App() {
@@ -79,7 +82,6 @@ function App() {
 }
 
 
-
 const TabContent = ({selectedTab, addChord, deleteChord}) => {
     const renderChords = (chord, ChordComponent) => (
         <div className={`accord-groups`}>
@@ -95,6 +97,12 @@ const TabContent = ({selectedTab, addChord, deleteChord}) => {
         </div>
     );
 
+    const renderChordName = (chordGroup) => (
+        <div className={`accord-groups`}>
+            {chordGroup.chords.map(chord => <ChordName name={chord.name} addChord={addChord}/>)}
+        </div>
+    )
+
     const renderTabContent = () => {
         switch (selectedTab) {
             case INSTRUMENT_TYPE.GUITAR:
@@ -103,6 +111,8 @@ const TabContent = ({selectedTab, addChord, deleteChord}) => {
                 return ukuleleData.map(chords => renderChords(chords, UkuleleChord));
             case INSTRUMENT_TYPE.PIANO:
                 return pianoData.map(chords => renderChords(chords, PianoChord));
+            case INSTRUMENT_TYPE.CHORD_NAME_ONLY:
+                return guitarData.map(chords => renderChordName(chords));
         }
     }
 
@@ -132,6 +142,17 @@ const SelectedChords = ({selectedChords, selectedTab, deleteAllSelectedChord, de
         </div>
     );
 
+    const renderChordNames = () => (
+        <div>
+            {/*<div style={{margin: '0 auto'}}>This page added for simpler accord search</div>*/}
+            <div className={`accord-groups`}>
+                {selectedChords.map(name => <ChordName name={name}/>)}
+            </div>
+        </div>
+    )
+
+    console.log({selectedChords})
+
     function getContent() {
         let chords;
 
@@ -147,6 +168,8 @@ const SelectedChords = ({selectedChords, selectedTab, deleteAllSelectedChord, de
             case INSTRUMENT_TYPE.PIANO:
                 chords = selectedChords.map(chordName => ({...pianoChordsObj[chordName]}))
                 return renderChords(chords, PianoChord);
+            case INSTRUMENT_TYPE.CHORD_NAME_ONLY:
+                return renderChordNames();
         }
     }
 
