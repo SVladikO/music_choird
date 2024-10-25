@@ -46,7 +46,7 @@ function App() {
     const [selectedChords, setSelectedChords] = useState([]);
 
     const selectChord = chord => setSelectedChords([...selectedChords, chord]);
-    const deleteChord = chord => setSelectedChords([...selectedChords.filter(c => c !== chord)]);
+    const deleteChord = chordIndex => setSelectedChords([...selectedChords.filter((c, i) => i !== chordIndex)]);
     const deleteAllChord = () => setSelectedChords([]);
 
     const renderGuitarChords = (chordGroup, externalProps = {}) => renderChords(chordGroup, GuitarChord, externalProps);
@@ -59,6 +59,7 @@ function App() {
                 <ChordComponent
                     key={d.name + index}
                     chord={d}
+                    chordIndex={index}
                     onChordSelect={selectChord}
                     onChordDelete={deleteChord}
                     {...externalProps}

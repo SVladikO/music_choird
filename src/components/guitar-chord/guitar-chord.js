@@ -2,6 +2,7 @@ import {Wrapper, DeleteIcon, ChordName, Table, Tr, Td, Dot, LastDot, LadNumber, 
 
 export default function GuitarChord(props) {
     const {headerNotes} = props.chord;
+    const {chordIndex, isSelected} = props;
 
     /**
      * We need to show which string don't touch for some chords that's why need to add extra layer above strings
@@ -66,16 +67,16 @@ export default function GuitarChord(props) {
 
     return (
         <Wrapper
-            isSelected={props.isSelected}
-            onClick={() => !props.isSelected && props.onChordSelect(props.chord.name)}
+            isSelected={isSelected}
+            onClick={() => !isSelected && props.onChordSelect(props.chord.name)}
         >
-            {props.isSelected && <DeleteIcon onClick={e => {
+            {isSelected && <DeleteIcon onClick={e => {
                 e.stopPropagation();
-                props.onChordDelete(props.chord.name)
+                props.onChordDelete(chordIndex)
             }}>X</DeleteIcon>}
             <ChordName>{props.chord.name}</ChordName>
             <LadNumber>{props.chord.ladNumber}</LadNumber>
-            <Table isSelected={props.isSelected}>
+            <Table isSelected={isSelected}>
                 {props.chord.notes.map((n, index) => renderRow(n, index === 0))}
             </Table>
         </Wrapper>

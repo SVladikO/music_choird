@@ -25,6 +25,8 @@ const blackButtons = [
 const whiteButtons = [1, 3, 5, 6, 8, 10, 12, 13, 15, 17, 18, 20, 22]
 
 export default function PianoChord(props) {
+    const {chordIndex, isSelected} = props;
+
     const renderBlackButtons = notes => {
         return (
             <div>
@@ -47,18 +49,18 @@ export default function PianoChord(props) {
 
     return (
         <Wrapper
-            isSelected={props.isSelected}
-            onClick={() => !props.isSelected && props.onChordSelect(props.chord.name)}
+            isSelected={isSelected}
+            onClick={() => !isSelected && props.onChordSelect(props.chord.name)}
             width={320}
         >
-            {props.isSelected && <DeleteIcon onClick={e => {
+            {isSelected && <DeleteIcon onClick={e => {
                 e.stopPropagation();
-                props.onChordDelete(props.chord.name)
+                props.onChordDelete(chordIndex)
             }}>X</DeleteIcon>}
             <ChordName>{props.chord.name}</ChordName>
             <LadNumber>{props.chord.ladNumber}</LadNumber>
             <TableWrapper>
-                <Table isSelected={props.isSelected}>
+                <Table isSelected={isSelected}>
                     {renderWhiteButtons(props.chord.notes)}
                 </Table>
                 {renderBlackButtons(props.chord.notes)}
