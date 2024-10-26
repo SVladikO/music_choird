@@ -8,6 +8,10 @@
   /*margin: 0 auto;*/
   /*border: solid 1px red;*/
 }
+.accord-selected-groups {
+  flex-wrap: wrap;
+
+}
 .accord-groups-selected {
   flex-wrap: wrap;
   justify-content: left;

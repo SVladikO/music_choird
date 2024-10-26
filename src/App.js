@@ -129,7 +129,7 @@ const SelectedChords = ({selectedChords, selectedTab, deleteAllSelectedChord, de
     }
 
     const renderChords = (chords, ChordComponent) => (
-        <div className={`accord-groups`}>
+        <div className={`accord-groups accord-selected-groups`}>
             {chords.map((d, index) =>
                 <ChordComponent
                     key={d.name + index}
@@ -145,7 +145,7 @@ const SelectedChords = ({selectedChords, selectedTab, deleteAllSelectedChord, de
     const renderChordNames = () => (
         <div>
             {/*<div style={{margin: '0 auto'}}>This page added for simpler accord search</div>*/}
-            <div className={`accord-groups`}>
+            <div className={`accord-groups accord-selected-groups`}>
                 {selectedChords.map(name => <ChordName name={name}/>)}
             </div>
         </div>
