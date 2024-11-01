@@ -19,6 +19,6 @@ export const Tab = styled.div`
     font-size: 20px;
     padding: 4px 8px;
     color: ${p => p.isSelected ? 'white' : 'black'};
-    background: ${p => p.isSelected ? 'black' : 'white'};
+    background: ${p => p.isSelected ? 'black' : '#efeded'};
     
 `;

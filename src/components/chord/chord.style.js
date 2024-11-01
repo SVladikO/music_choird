@@ -7,28 +7,31 @@ const tableStyle = css`
 
 export const Wrapper = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     ${p => p.width && `min-width: ${p.width}px`};
     ${p => p.width && `max-width: ${p.width}px`};
     position: relative;
     box-sizing: border-box;
-    border: solid 2px white;
+    border: solid 2px #f1f1f1;
     border-radius: 4px;
-    padding: 6px 10px;
+    padding: 6px 12px;
 
     &:hover {
-        border: ${p => p.isSelected ? '' : 'solid 2px darkgreen'};
-        background: ${p => p.isSelected ? '' : 'rgb(89, 244, 158)'};
+        border: ${p => p.isSelected ? '' : 'solid 2px #bbb9b9'};
+        background: ${p => p.isSelected ? '' : ''};
         cursor: pointer;
     }
-    
+
     &:active {
-        background: ${p => p.isSelected ? '' : 'rgb(25, 212, 109)'}
+        background: ${p => p.isSelected ? '' : '#d6d6d6'}
     }
 `;
 
 export const DeleteIcon = styled.div`
     position: absolute;
+    top: 0px;
     right: 0px;
     color: #a8a7a7;
     border: solid 1px #a8a7a7;
@@ -44,10 +47,32 @@ export const ChordName = styled.div`
     padding: 10px 0;
 `;
 
+export const PianoKeysWrapper = styled.div`
+    position: relative;
+`;
+
+export const WhiteButtonsWrapper = styled.div`
+    display: flex;
+    //border: solid 1px blue;
+`;
+
+export const WhiteButton = styled.div`
+    width: 20px;
+    height: 84px;
+    background: ${p => p.isSelected ? 'red' : 'white'};
+    border: solid 1px black;
+    border-width: 1px 0 1px 1px;
+    border-radius: 0 0 2px 2px;
+    
+    &:last-child {
+        border-width: 1px;
+    }
+`;
+
 export const Table = styled.table`
     ${tableStyle};
     border-top: solid 2px black;
-    background: ${p => p.isSelected ? '' : ''};
+    background: ${p => p.isSelected ? 'white' : 'white'};
     width: max-content;
 `;
 

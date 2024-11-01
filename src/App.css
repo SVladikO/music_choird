@@ -1,3 +1,9 @@
+
+.wrapper {
+  background: #f1f1f1;
+  border: solid 1px #efeded;
+}
+
 .accord-groups {
   text-align: center;
   padding: 10px;
@@ -10,7 +16,6 @@
 }
 .accord-selected-groups {
   flex-wrap: wrap;
-
 }
 .accord-groups-selected {
   flex-wrap: wrap;
@@ -34,6 +39,7 @@
 
 .selected-chords-wrapper {
 /*border: solid 3px green;*/
+
   width: fit-content;
   border-radius: 10px;
   position: sticky;

@@ -7,7 +7,7 @@ export const TableWrapper = styled.div`
 `;
 
 const tableStyle = css`
-    border: solid 0.8px black;
+    border: solid 1px black;
     border-collapse: collapse;
     
 `;
@@ -15,7 +15,7 @@ const tableStyle = css`
 export const BlackBtn = styled.div`
     
     ${tableStyle};
-    background: black;
+    background: ${p => p.isSelected ? 'red' : 'black'};
     position: absolute;
     top: 0;
     left: ${p => p.left || 0}px;

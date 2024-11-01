@@ -60,7 +60,7 @@ function App() {
     const deleteAllSelectedChord = () => setSelectedChords([]);
 
     return (
-        <>
+        <div class='wrapper'>
             <p className="center-content">Click on chords which you need.</p>
             <Tabs
                 selectedTab={selectedTab}
@@ -77,7 +77,7 @@ function App() {
                 selectedTab={selectedTab}
                 addChord={addChord}
                 deleteChord={deleteChord}/>
-        </>
+        </div>
     )
 }
 

@@ -2,25 +2,25 @@ import {
     Wrapper,
     DeleteIcon,
     ChordName,
-    Table,
-    Tr,
-    LadNumber,
+    WhiteButtonsWrapper,
+    WhiteButton,
+    LadNumber, PianoKeysWrapper,
 } from '../chord/chord.style.js';
-import {TableWrapper, Dot, PianoTd, BlackBtn} from './piano-chord.style';
+import {Dot, BlackBtn} from './piano-chord.style';
 
 const showNumbers = false;
 
 const blackButtons = [
     {left: 16, position: 2},
-    {left: 39, position: 4},
-    {left: 84, position: 7},
-    {left: 106, position: 9},
-    {left: 128, position: 11},
-    {left: 175, position: 14},
-    {left: 198, position: 16},
-    {left: 242, position: 19},
-    {left: 265, position: 21},
-    {left: 288, position: 23},
+    {left: 36, position: 4},
+    {left: 78, position: 7},
+    {left: 99, position: 9},
+    {left: 120, position: 11},
+    {left: 161, position: 14},
+    {left: 183, position: 16},
+    {left: 225, position: 19},
+    {left: 246, position: 21},
+    {left: 265, position: 23},
 ]
 const whiteButtons = [1, 3, 5, 6, 8, 10, 12, 13, 15, 17, 18, 20, 22]
 
@@ -30,20 +30,18 @@ export default function PianoChord(props) {
     const renderBlackButtons = notes => {
         return (
             <div>
-                {blackButtons.map(b => (
-                    <BlackBtn left={b.left}>{notes.includes(b.position) && <Dot/>}{showNumbers && b.position}</BlackBtn>
-                ))}
+                {blackButtons.map(b =>
+                    <BlackBtn left={b.left} isSelected={notes.includes(b.position)} />
+                )}
             </div>
         )
     }
 
     const renderWhiteButtons = notes => {
         return (
-            <Tr>
-                {whiteButtons.map(b => (
-                    <PianoTd>{notes.includes(b) && <Dot/>}{showNumbers && b}</PianoTd>
-                ))}
-            </Tr>
+            <WhiteButtonsWrapper>
+                {whiteButtons.map(b => <WhiteButton isSelected={notes.includes(b)} />)}
+            </WhiteButtonsWrapper>
         );
     }
 
@@ -59,12 +57,12 @@ export default function PianoChord(props) {
             }}>X</DeleteIcon>}
             <ChordName>{props.chord.name}</ChordName>
             <LadNumber>{props.chord.ladNumber}</LadNumber>
-            <TableWrapper>
-                <Table isSelected={isSelected}>
+            <PianoKeysWrapper>
+                <div isSelected={isSelected}>
                     {renderWhiteButtons(props.chord.notes)}
-                </Table>
+                </div>
                 {renderBlackButtons(props.chord.notes)}
-            </TableWrapper>
+            </PianoKeysWrapper>
         </Wrapper>
 
     )
