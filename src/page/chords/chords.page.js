@@ -47,7 +47,6 @@ function ChordsPage() {
 
     return (
         <div class='wrapper'>
-            <Header></Header>
             <Tabs
                 selectedTab={selectedTab}
                 tabs={INSTRUMENT_TABS}
