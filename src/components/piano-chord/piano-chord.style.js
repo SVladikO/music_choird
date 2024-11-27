@@ -1,6 +1,5 @@
 import styled, {css} from "styled-components";
 
-
 export const TableWrapper = styled.div`
     position: relative;
     overflow: hidden;
@@ -13,9 +12,9 @@ const tableStyle = css`
 `;
 
 export const BlackBtn = styled.div`
-    
+    border-radius: 0 0 1px 1px;
     ${tableStyle};
-    background: ${p => p.isSelected ? 'red' : 'black'};
+    background: ${p => p.isSelected ? '#ff6565' : 'black'};
     position: absolute;
     top: 0;
     left: ${p => p.left || 0}px;

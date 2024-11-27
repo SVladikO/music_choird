@@ -23,6 +23,7 @@ const blackButtons = [
     {left: 265, position: 23},
 ]
 const whiteButtons = [1, 3, 5, 6, 8, 10, 12, 13, 15, 17, 18, 20, 22]
+const whiteChordNames = ['C', 'D','E', 'F', 'G', 'A', 'B', 'C', 'D','E', 'F', 'G', 'A']
 
 export default function PianoChord(props) {
     const {chordIndex, isSelected} = props;
@@ -40,7 +41,7 @@ export default function PianoChord(props) {
     const renderWhiteButtons = notes => {
         return (
             <WhiteButtonsWrapper>
-                {whiteButtons.map(b => <WhiteButton isSelected={notes.includes(b)} />)}
+                {whiteButtons.map((num, index) => <WhiteButton isSelected={notes.includes(num)}>{whiteChordNames[index]}</WhiteButton>)}
             </WhiteButtonsWrapper>
         );
     }

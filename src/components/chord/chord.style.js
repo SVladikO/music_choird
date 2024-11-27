@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     padding: 6px 12px;
 
     &:hover {
-        border: ${p => p.isSelected ? '' : 'solid 2px #bbb9b9'};
+        border: ${p => p.isSelected ? '' : 'solid 2px nones'};
         background: ${p => p.isSelected ? '' : ''};
         cursor: pointer;
     }
@@ -57,9 +57,13 @@ export const WhiteButtonsWrapper = styled.div`
 `;
 
 export const WhiteButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
     width: 20px;
     height: 84px;
-    background: ${p => p.isSelected ? 'red' : 'white'};
+    background: ${p => p.isSelected ? '#ff6565' : 'white'};
     border: solid 1px black;
     border-width: 1px 0 1px 1px;
     border-radius: 0 0 2px 2px;
