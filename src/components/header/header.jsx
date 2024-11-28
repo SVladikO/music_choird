@@ -7,9 +7,9 @@ import {ReactComponent as ChevronDown} from '../../icon/chevron_donw.svg';
 export default function Header() {
     return (
         <Wrapper>
-            <Logo>Music Room</Logo>
+                <Logo>Music Room</Logo>
             <a href={page_urls.chords}>
-                <Item> Chords <ChevronDown/></Item>
+                <Item isSelected> Chords <ChevronDown/></Item>
             </a>
             <a href={page_urls.notes}>
                 <Item>Notes</Item>

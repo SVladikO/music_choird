@@ -8,22 +8,22 @@ export const Wrapper = styled.div`
     display: flex;
 `;
 
-export const Logo = styled.div`
-    color: black;
+export const Logo = styled.pre`
+    color: #adffae;
     font-size: 19px;
-    background: #adffae;
+    height: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    height: 80%;
-    box-sizing: border-box;
-    margin: 5px 80px 0 20px;
-    cursor: pointer;
+    flex-direction: row;
+    margin: 0 200px 0 20px;
 `;
 
 export const Item = styled.div`
-    color: #cecdcd;
+    background: ${p => p.isSelected ? '#cecdcd' : 'none'};
+    color: ${p => p.isSelected ? '#000' : '#cecdcd'};
     height: 100%;
     padding: 10px 15px;
     display: flex;
@@ -34,7 +34,7 @@ export const Item = styled.div`
     border-right: solid 0.5px #434343;
 
     &:hover {
-        background: #cecdcd;
+        background: #afafaf;
         color: black;
     }
 
