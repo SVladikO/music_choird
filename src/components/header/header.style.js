@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Logo = styled.pre`
-    color: #adffae;
-    font-size: 19px;
+    color: #cecdcd;
+    font-size: 20px;
     height: 100%;
     box-sizing: border-box;
     cursor: pointer;
@@ -18,10 +18,10 @@ export const Logo = styled.pre`
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 0 200px 0 20px;
+    margin: 0 150px 0 20px;
 `;
 
-export const Item = styled.div`
+export const Item = styled.a`
     background: ${p => p.isSelected ? '#cecdcd' : 'none'};
     color: ${p => p.isSelected ? '#000' : '#cecdcd'};
     height: 100%;
