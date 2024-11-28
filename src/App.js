@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from "react-router";
 
 import ChordsPage from './page/chords/chords.page';
-import NotePage from './page/Notes/Note.page';
+import NotePage from './page/notes/Note.page';
 
 import Header from './components/header/header';
 import DonateInfo from "./components/donate-info/donate-info";
