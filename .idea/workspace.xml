@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="821539cf-5365-4d5f-94d4-bb56cde48da9" name="Changes" comment="Refactored folder name">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/all-notes/all-notes.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/all-notes/all-notes.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkbox/checkbox.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkbox/checkbox.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note-preparation/note-preparation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note-preparation/note-preparation.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note-presentation/note-presentation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note-presentation/note-presentation.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note-sheet/note-sheet.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note-sheet/notes-sheet.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note/note.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/note/note.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/piano-buttons/piano-buttons.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/piano-buttons/piano-buttons.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/training-history/training-history.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/training-history/training-history.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon/bass-clef.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon/treble-clef.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/Notes/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/all-notes.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/checkbox.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/note-preparation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/note-presentation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/note.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/notes-sheet.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/piano-buttons.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/training-history.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/icons/bass-clef.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Notes/icons/treble-clef.svg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactored folder name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored folder name" />
+  </component>
+</project>
