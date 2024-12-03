@@ -1,6 +1,6 @@
 import React from "react";
-import NotesSheet from './notes-sheet.jsx';
-import Note from "./note";
+import NotesSheet from '../notes-sheet/notes-sheet.jsx';
+import Note from "../note/note.jsx";
 
 const NotePresentation = props => {
     const {noteName, isBass, isTreble, isShowNoteName} = props;

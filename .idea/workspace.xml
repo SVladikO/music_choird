@@ -2,51 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="821539cf-5365-4d5f-94d4-bb56cde48da9" name="Changes" comment="Refactored folder name">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/all-notes/all-notes.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/all-notes/all-notes.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/checkbox/checkbox.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/checkbox/checkbox.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note-preparation/note-preparation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note-preparation/note-preparation.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note-presentation/note-presentation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note-presentation/note-presentation.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note-sheet/note-sheet.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note-sheet/notes-sheet.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note/note.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/note/note.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/piano-buttons/piano-buttons.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/piano-buttons/piano-buttons.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/training-history/training-history.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/training-history/training-history.style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icon/bass-clef.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icon/treble-clef.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/Notes/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/all-notes.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/checkbox.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/note-preparation.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/note-presentation.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/note.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/notes-sheet.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/piano-buttons.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/components/training-history.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/icons/bass-clef.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/Notes/icons/treble-clef.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2pUp8fN5RaYVq2f0Ka3RMcGb4Ut" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "master"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vlad.serhiychuk/Desktop/git/music_room&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="821539cf-5365-4d5f-94d4-bb56cde48da9" name="Changes" comment="Refactored folder name" />
+      <created>1732830351236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732830351236</updated>
+      <workItem from="1732830352411" duration="133000" />
+      <workItem from="1732830515258" duration="413000" />
+    </task>
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

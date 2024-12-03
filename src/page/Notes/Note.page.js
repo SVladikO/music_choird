@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import './App.css';
-import {TREBLE_NOTE, mixArray, prepareNotes, clearNotesHistory, ALL_NOTES} from './utils';
+import {TREBLE_NOTE, mixArray, prepareNotes, clearNotesHistory, ALL_NOTES} from '../../note-utils.js';
 
-import MainPage from './pages/main-page.jsx';
-import PracticePage from "./pages/practice-page";
-import TheEndPage from "./pages/the-end-page";
+import MainPage from '../../sub-page/main-page.jsx';
+import PracticePage from '../../sub-page/practice-page.jsx';
+import TheEndPage from '../../sub-page/end-page.jsx';
 
 function NotePage() {
     const [isBassNoteType, setIsBassNoteType] = useState(false);

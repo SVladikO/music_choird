@@ -1,12 +1,13 @@
 import React from "react";
+import { Wrapper } from "./checkbox.style";
 
 const Checkbox = ({onChange, value, label}) => {
     console.log({value})
     return (
-        <div className='checkbox' onClick={onChange}>
+        <Wrapper onClick={onChange}>
              <input type='checkbox' checked={value}/>
             {label}
-        </div>
+        </Wrapper>
     )
 }
 

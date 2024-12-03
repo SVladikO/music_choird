@@ -292,19 +292,6 @@
     flex-direction: column;
 }
 
-.checkbox-container {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: start;
-    width: 300px;
-    /*border: solid;*/
-    margin: 20px auto;
-}
-.checkbox {
-    padding: 2px;
-}
-
 .notes_presentation_container {
     /*border: solid 1px red;*/
     display: flex;

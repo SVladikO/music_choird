@@ -1,5 +1,5 @@
 import React from "react";
-import TrainingHistory from "../components/training-history";
+import TrainingHistory from "../components/training-history/training-history.jsx";
 
 const TheEndPage = props => {
     const {

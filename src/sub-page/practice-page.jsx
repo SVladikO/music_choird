@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 
-import TrainingHistory from "../components/training-history";
-import NotePresentation from "../components/note-presentation";
-import PianoButtons from "../components/piano-buttons";
-import Checkbox from "../components/checkbox";
+import TrainingHistory from "../components/training-history/training-history.jsx";
+import NotePresentation from "../components/note-presentation/note-presentation.jsx";
+import PianoButtons from "../components/piano-buttons/piano-buttons.jsx";
+import Checkbox from "../components/checkbox/checkbox.jsx";
+import { CheckboxWrapper } from "./practice-page.style";
 
 const PracticePage = props => {
     const {
@@ -41,13 +42,13 @@ const PracticePage = props => {
                 isShowNoteName={isShowNoteName}
             />
             <PianoButtons checkNote={checkNote} isShowName={isShowNoteName} noteNames={notesToGuess}/>
-            <div className={'checkbox-container'}>
+            <CheckboxWrapper>
                 <Checkbox
                     value={isShowNoteName}
                     onChange={() => setIsShowNoteName(!isShowNoteName)}
                     label={'Show note names'}
                 />
-            </div>
+            </CheckboxWrapper>
             <div className='buttons_container'>
                 <div className={'button'} onClick={prepareMainPage}>MAIN PAGE</div>
             </div>
