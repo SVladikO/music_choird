@@ -1,5 +1,5 @@
 import React from "react";
-import {TREBLE_NOTE} from '../../note-utils.js';
+import {TREBLE_NOTE} from '../note-utils.js';
 
 const NotePresentation = props => {
     const {notesToGuessInit, changeNoteVisibility} = props;

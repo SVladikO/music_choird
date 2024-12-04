@@ -1,11 +1,11 @@
 import {useState} from 'react';
 
-import GuitarChord from '../../components/guitar-chord/guitar-chord';
-import UkuleleChord from '../../components/ukulele-chord/ukulele-chord';
-import PianoChord from '../../components/piano-chord/piano-chord';
-import ChordName from '../../components/chord-name/chord-name';
-import Tabs from '../../components/tabs/tabs';
-import Header from '../../components/header/header';
+import GuitarChord from '../../components/guitar-chord';
+import UkuleleChord from '../../components/ukulele-chord';
+import PianoChord from '../../components/piano-chord';
+import ChordName from '../../components/chord-name';
+import Tabs from '../../components/tabs';
+import Header from '../../components/header';
 
 import guitarData from '../../data/guitar';
 import ukuleleData from '../../data/ukulele';

@@ -1,4 +1,4 @@
-import {BASS_NOTE, TREBLE_NOTE} from "../../note-utils.js";
+import {BASS_NOTE, TREBLE_NOTE} from "../note-utils.js";
 
 const blackButtonIndexes = [2, 3, 5, 6, 7, 9, 10, 12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 26, 27, 28]
 

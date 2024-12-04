@@ -1,6 +1,7 @@
-import AllNotes from "../components/all-notes/all-notes.jsx";
-import PianoButtons from '../components/piano-buttons/piano-buttons.jsx';
 import React from "react";
+import AllNotes from "../components/all-notes.jsx";
+import PianoButtons from '../components/piano-buttons.jsx';
+
 import {ALL_NOTES, BASS_NOTE, TREBLE_NOTE} from "../note-utils.js";
 
 const MainPage = props => {

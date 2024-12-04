@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
-import TrainingHistory from "../components/training-history/training-history.jsx";
-import NotePresentation from "../components/note-presentation/note-presentation.jsx";
-import PianoButtons from "../components/piano-buttons/piano-buttons.jsx";
-import Checkbox from "../components/checkbox/checkbox.jsx";
+import TrainingHistory from "../components/training-history.jsx";
+import NotePresentation from "../components/note-presentation.jsx";
+import PianoButtons from "../components/piano-buttons.jsx";
+import Checkbox from "../components/checkbox.jsx";
 import { CheckboxWrapper } from "./practice-page.style";
 
 const PracticePage = props => {

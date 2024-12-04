@@ -5,7 +5,7 @@ import {
     WhiteButtonsWrapper,
     WhiteButton,
     LadNumber, PianoKeysWrapper,
-} from '../chord/chord.style.js';
+} from './chord.style.js';
 import {Dot, BlackBtn} from './piano-chord.style';
 
 const showNumbers = false;
