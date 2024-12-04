@@ -7,7 +7,7 @@ export default function Header({page_urls}) {
     return (
         <Wrapper>
             <Logo>Music Room</Logo>
-            <Item href={page_urls.chords}> Chords <ChevronDown/></Item>
+            <Item href={page_urls.chords}> Chords </Item>
             <Item href={page_urls.notes}>Notes</Item>
             <Item href={page_urls.about}>About</Item>
         </Wrapper>
